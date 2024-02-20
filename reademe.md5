@@ -1,0 +1,43 @@
+BasePage 类方法总结
+
+BasePage 类是一个页面操作的基类，提供了一系列通用的方法来支持不同页面上的操作。
+
+1. 初始化方法
+   - __init__(self): 初始化WebDriver实例。
+
+2. 元素定位和操作
+   - get_element(self, location): 根据提供的定位信息获取元素。
+   - input_text(self, element, text): 清除文本并输入新的文本到元素中。
+   - select_choice_value(self, element, value): 在下拉选择框中选择指定的value值。
+
+3. 鼠标操作
+   - hover_element(self, element): 鼠标悬停在指定元素上。
+   - context_click_element(self, element): 在指定元素上执行鼠标右击操作。
+   - double_click_element(self, element): 在指定元素上执行鼠标双击操作。
+   - drag_and_drop_element(self, source_element, target_element): 拖拽一个元素到另一个元素上。
+   - click_element(self, element): 在指定元素上执行鼠标单击操作。
+
+4. 窗口和frame操作
+   - switch_to_new_window(self): 切换到最新打开的窗口。
+   - switch_to_original_window(self, original_window): 切换回原始窗口。
+   - switch_to_frame(self, frame_reference): 切换到指定的frame。
+   - switch_to_default_content(self): 切换回主文档。
+
+5. 页面操作
+   - refresh_page(self): 刷新当前页面。
+   - get_current_url(self): 获取当前页面的URL。
+   - get_page_title(self): 获取当前页面的标题。
+
+6. JavaScript操作
+   - execute_script(self, script, *args): 执行JavaScript脚本。
+   - scroll_to_bottom(self): 滚动到页面底部。
+   - scroll_to_element(self, element): 滚动到指定元素的位置。
+
+7. 等待操作
+   - wait_for_element_visible(self, locator, timeout=10): 等待元素可见。
+   - wait_for_element_clickable(self, locator, timeout=10): 等待元素可点击。
+
+8. 截屏操作
+   - take_screenshot(self, file_name): 进行截屏操作，并将截图保存到指定的文件。
+
+请注意，以上方法可能需要根据实际的测试框架和需求进行调整和扩展。
